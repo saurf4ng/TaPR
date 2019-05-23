@@ -30,7 +30,7 @@ This script supports two kinds of file format. (Assume that normal and anomaly l
 
 ## Running
 
-python ./evaluation.py -i <prediction_file> -c <anomaly_file> {-a} <alpha> {-t} <theta> {-d} <delta> {-l} <label> {-p}
+python ./TaPR.py -i <prediction_file> -c <anomaly_file> {-a} <alpha> {-t} <theta> {-d} <delta> {-l} <label> {-p}
 
 Here is a description of all command line options, inputs, and parameters:
 
@@ -55,7 +55,7 @@ Here is a description of all command line options, inputs, and parameters:
 If you need to see help menue, please type below operation:
 
 ```
-python ./evaluation.py -h
+python ./TaPR.py -h
 ```
 
 
@@ -64,9 +64,9 @@ python ./evaluation.py -h
 Below two examples produce indentical results.
 
 ```
-python ./evaluation.py -i sample/ocsvm.csv -a sample/swat.csv -t 0.5 -d 180 -l 1,-1
+python ./TaPR.py -i sample/ocsvm.csv -a sample/swat.csv -t 0.5 -d 180 -l 1,-1
 ```
 
 ```
-python ./evaluation.py -i sample/ocsvm.csv -a sample/swat.csv -d 180
+python ./TaPR.py -i sample/ocsvm.csv -a sample/swat.csv -d 180
 ```
