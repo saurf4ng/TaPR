@@ -152,10 +152,14 @@ class TaPR:
             for prediction in self._predictions:
                 score += self._overlap_and_subsequent_score(anomaly, ambiguous, prediction)
 
-            if min(1.0, score / max_score) >= self._theta:
+            if min(1.0, score / max_score) > self._theta:
                 total_score += 1.0
                 detected_anomalies.append(anomaly)
-        return total_score / len(self._anomalies), detected_anomalies
+
+        if len(self._anomalies) == 0:
+            return 0.0, []
+        else:
+            return total_score / len(self._anomalies), detected_anomalies
 
     # return a value with the detected prediction lists
     def TaP_d(self) -> {float, list}:
@@ -171,10 +175,14 @@ class TaPR:
 
                 score += self._overlap_and_subsequent_score(anomaly, ambiguous, prediction)
 
-            if (score/max_score) >= self._theta:
+            if (score/max_score) > self._theta:
                 total_score += 1.0
                 correct_predictions.append(prediction)
-        return total_score / len(self._predictions), correct_predictions
+
+        if len(self._predictions) == 0:
+            return 0.0, []
+        else:
+            return total_score / len(self._predictions), correct_predictions
 
 
     def _detect(self, src_range: Term, ranges: list, theta: int) -> bool:
@@ -246,7 +254,11 @@ class TaPR:
                 score += self._overlap_and_subsequent_score(anomaly, ambiguous, prediction)
 
             total_score += min(1.0, score/max_score)
-        return total_score / len(self._anomalies)
+
+        if len(self._anomalies) == 0:
+            return 0.0
+        else:
+            return total_score / len(self._anomalies)
 
     def TaP_p(self) -> float:
         total_score = 0.0
@@ -261,7 +273,11 @@ class TaPR:
                 score += self._overlap_and_subsequent_score(anomaly, ambiguous, prediction)
 
             total_score += score/max_score
-        return total_score / len(self._predictions)
+
+        if len(self._predictions) == 0:
+            return 0.0
+        else:
+            return total_score / len(self._predictions)
 
 
 def main(argv):
