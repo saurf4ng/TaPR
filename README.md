@@ -70,3 +70,6 @@ python ./TaPR.py -i sample/ocsvm.csv -a sample/swat.csv -t 0.5 -d 180 -l 1,-1
 ```
 python ./TaPR.py -i sample/ocsvm.csv -a sample/swat.csv -d 180
 ```
+
+## Cite
+The details of this work is going to be published on the 28th international conference on Information and Knowledge Management (CIKM) 2019.
