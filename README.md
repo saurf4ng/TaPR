@@ -72,4 +72,15 @@ python ./TaPR.py -i sample/ocsvm.csv -a sample/swat.csv -d 180
 ```
 
 ## Cite
-The details of this work is going to be published on the 28th international conference on Information and Knowledge Management (CIKM) 2019.
+The details of this work is going to be published on the 28th international conference on Information and Knowledge Management (CIKM) 2019 as belows.
+
+```
+@inproceedings{hwang2019time,
+  title={Time-Series Aware Precision and Recall for Anomaly Detection: Considering Variety of Detection Result and Addressing Ambiguous Labeling},
+  author={Hwang, Won-Seok and Yun, Jeong-Han and Kim, Jonguk and Kim, Hyoung Chun},
+  booktitle={Proceedings of the 28th ACM International Conference on Information and Knowledge Management},
+  pages={2241--2244},
+  year={2019},
+  organization={ACM}
+}
+```
