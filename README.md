@@ -1,3 +1,12 @@
+# A new version is released!
+
+I found that there is a limitation of TaPR.
+So, I propose a new version, "enhanced Time-series aware Precision and Recall (eTaPR)."
+Please check the below repository.
+https://github.com/saurf4ng/eTaPR
+
+
+
 
 # Time-series Aware Precision and Recall
 
